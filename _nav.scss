@@ -1,0 +1,103 @@
+// variables generales
+
+$primary-color: #152746;
+$color-secundario: #7D95F4;
+$color-letra: #f3f3f3;
+
+// -----------------------------
+
+
+nav{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 111;
+    background-color: $primary-color;
+}
+
+nav{
+    .navItems{
+        width: 30vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .itemNav.active, .itemNav:hover{
+            border-bottom: $color-letra solid 1px;
+            transition: .5s;
+        }
+    }
+    .logo{
+        display: flex;
+        margin-left: 10vw;
+        align-items: center;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: 3px;
+        cursor: pointer;
+        text-transform: uppercase;
+        b{
+            font-size: 55px;
+            color: $color-secundario;
+        }
+    }
+    .checkbtn{
+        font-size: 30px;
+        color: #fff;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+    }
+    #check{
+        display: none;
+    }
+}
+
+
+// Responsive nav
+
+
+@media screen and (max-width: 768px) {
+
+    nav{
+        .checkbtn{
+            display: block;
+        }
+        .navItems{
+            position: fixed;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 100%;
+            height: 100vh;
+            background: $primary-color;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+            .itemNav{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+                a{
+                    font-size: 20px;
+                }
+            }
+            .itemNav a:hover, .itemNav a.active{
+                background: none;
+            }
+
+        }
+        #check:checked ~ ul{
+            left: 0;
+        }
+        .logo{
+            margin-left: 5vw;
+        }
+    }
+
+
+    
+}

@@ -1,0 +1,113 @@
+// variables generales
+
+$primary-color: #152746;
+$color-secundario: #7D95F4;
+$color-letra: #f3f3f3;
+
+// -----------------------------
+
+.seccion2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 100px;
+    height: 50vh;
+
+    h2{
+        color: $primary-color;
+        font-size: 50px;
+        text-transform: capitalize;
+    }
+    .seccion2--ul{
+        display: flex;
+        flex-direction: row;
+        column-gap: 200px;
+        li{
+            i{
+                color: $primary-color;
+                font-size: 100px;
+                text-align: center;
+            }
+            h3{
+                color: $primary-color;
+                text-align: center;
+                letter-spacing: 2px;
+                font-weight: 1000;
+            }
+        }
+    }
+}
+
+.seccion3{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 100px;
+    height: 50vh;
+    background: $primary-color;
+    position: relative;
+    top: -5px;
+
+    h2{
+        font-size: 50px;
+        text-transform: capitalize;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        column-gap: 240px;
+        li{
+            i{
+                font-size: 100px;
+                text-align: center;
+            }
+            h3{
+                text-align: center;
+                letter-spacing: 2px;
+                font-weight: 1000;
+            }
+        }
+    }
+}
+
+// Responsive
+
+@media screen and (max-width: 768px){
+
+    .seccion2{
+        row-gap: 75px;
+        h2{
+            font-size: 30px;
+        }
+        .seccion2--ul{
+            column-gap: 15px;
+        }
+        .seccion2--ul.one{
+            display: block;
+            li{
+                i{
+                    color: $primary-color;
+                    font-size: 160px;
+                    text-align: center;
+                }
+                h3{
+                    color: $primary-color;
+                    text-align: center;
+                    letter-spacing: 2px;
+                    font-size: 30px;
+                    font-weight: 1000;
+                }
+            }
+        }
+    }
+
+    .seccion3{
+
+        h2{
+            font-size: 30px;
+        }
+        ul{
+            column-gap: 15px;
+        }
+    }
+}

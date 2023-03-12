@@ -1,0 +1,88 @@
+// variables generales
+
+$primary-color: #152746;
+$color-secundario: #7D95F4;
+$color-letra: #f3f3f3;
+
+// -----------------------------
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+    background: $primary-color;
+    .cols{
+        width: 50%;
+        h1{
+            display: block;
+            font-size: 7em;
+            font-weight: 900;
+        }
+        .multiText{
+            color: $color-secundario;
+            text-transform: capitalize;
+        }
+        p{
+            display: block;
+            width: 90%;
+            font-size: 1.2em;
+        }
+    }
+    .cols0{
+        width: 60%;
+    }
+    .cols1{
+        .imgbox{
+            svg{
+                width: 80%;
+                padding: 0 10px;
+            }
+        }
+    }
+    .topline{
+        display: block;
+        position: relative;
+        font-size: 35px;
+        letter-spacing: 5px;
+    }
+    .topline::after{
+        position: absolute;
+        content: '';
+        height: 4px;
+        width: 45px;
+        bottom: 10px;
+        background-color: $color-secundario;
+    }
+}
+
+// Responsive
+
+
+@media screen and (max-width: 768px){
+
+    .wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100vh;
+        padding: 0 5%;
+        width: 100%;
+        .cols{
+            width: 100%;
+            h1{
+                font-size: 3.5em;
+            }
+        }
+        .cols1{
+            .imgbox{
+                svg{
+                    display: none;
+                }
+            }
+        }
+        
+    }
+}
